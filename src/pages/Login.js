@@ -10,11 +10,9 @@ export default function Login({ history }) {
    async function handleSubmit(e) {
         e.preventDefault();
         
-        const response = await api.post('/devs', {
-            username,
-        });
-        
         const response = await api.get('/homepage-posts-new', {withCredentials: true});
+
+        console.log(response.data);
     }
 
     return (
