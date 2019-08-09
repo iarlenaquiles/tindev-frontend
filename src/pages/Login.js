@@ -14,9 +14,7 @@ export default function Login({ history }) {
             username,
         });
         
-        const { _id } = response.data;
-
-        history.push(`/dev/${_id}`);
+        const response = await api.get('/homepage-posts-new', {withCredentials: true});
     }
 
     return (
